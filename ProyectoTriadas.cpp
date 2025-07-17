@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <array>
@@ -80,6 +79,24 @@ void InicializarJuego(){
     fase = 1;
 }
 
+void Colocación(){
+    // Variables 
+    int posicion;
+    
+    //Codigo
+    cout << "\n--- Fase de Colocación ---\n";
+    
+    cout << "Jugador " << turno_actual << endl;
+    cout << "Fichas disponibles: " << (turno_actual == J1 ? fichas_J1 : fichas_J2) << endl;
+    cout << "Ingresa posición para poner una ficha (0-23): ";
+    cin >> posicion;
+    cout << endl;
+    
+    //if  bool PosicionValida(){
+    
+    
+    }
+    
 
 
 int main()
@@ -88,16 +105,12 @@ int main()
     cout << "       ---TRIADAS---       " << endl;
     
     cout << "Bienvenido al juego de triadas.\n";
-    cout << "El objetivo de este juego es formar triadas (tres en raya) con las fichas en los cuadrados concentricos interconectados " << endl;
+    cout << "El objetivo de este juego es formar triadas (tres en raya) en los espacios dispoinbles." << endl;
     cout << "REGLAS: " << endl;
-    cout << "Se divide en 3 fases:" << endl;
-    cout << "1. Fase de colocación:"<< endl;
-    cout << "    - Cada Jugador tiene 9 fichas." << endl << "    - Si un jugador forma una triada, puede eliminar una ficha del oponente en el tablero." << endl << "    - La fase acaba cuando los jugadores hayan puesto todas sus fichas en el tablero." << endl;
-    cout << "2. Fase de movimiento:" << endl;
-    cout << "    - Los jugadores pueden mover sus fichas a cualquier posición adyacente que esté vacía." << endl << "    - Se mantiene la regla de la eliminación cuando se forma una triada." << endl;
-    cout << "3. Fase de vuelo:" << endl;
-    cout << "    - Cuando un jugador tiene 3 fichas puede moverlas a cualquier espacio vacío en el tablero, no solo adyacentes." << endl;
-    cout << "El GANADOR es el que reduzca las fichas de su oponente a 2 o le impida realizar movimientos validos." << endl;
+    cout << "    - Los jugadores inician con 9 fichas cada uno." << endl;
+    cout << "    - El juego tiene 3 fases: Colocación, Movimiento, Vuelo." << endl;
+    cout << "    - Si un jugador hace una triada (tres en raya), \n    puede eliminar una ficha del oponente." << endl;
+    cout << "    - El ganador es el que reduzca las fichas de su oponente a 2 \n    no le impida realizar movimientos." << endl;
     
     //
    
